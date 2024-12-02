@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Amirah B</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- START: Styles -->
+        <!-- Swiper -->
+        <link rel="stylesheet" href="assets/vendor/swiper/dist/css/swiper.min.css" />
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="assets/vendor/fancybox/dist/jquery.fancybox.min.css" />
+        <!-- Themebau -->
+        <link rel="stylesheet" href="assets/css/themebau.min.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <!-- END: Styles -->
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+        <style>
+            .venn-container {
+                position: relative;
+                width: 1600px;
+                height: 1200px;
+                margin: 50px auto;
+            }
+
+            .circle {
+                position: absolute;
+                width: 800px;
+                height: 800px;
+                border-radius: 50%;
+                opacity: 0.5;
+                cursor: pointer;
+                transition: opacity 0.3s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, sans-serif;
+                color: white;
+                font-weight: bold;
+                font-size: 48px;
+                user-select: none;
+                text-decoration: none;
+            }
+
+            .circle:hover {
+                opacity: 0.7;
+            }
+
+            #circle1 {
+                background-color: #FF6B6B;
+                left: 150px;
+            }
+
+            #circle2 {
+                background-color: #4ECDC4;
+                left: 650px;
+            }
+
+            .intersection {
+                position: absolute;
+                left: 600px;
+                width: 400px;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                text-align: center;
+                top: 50px;
+                z-index: 2;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .info-panel {
+                text-align: center;
+                margin-top: 20px;
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-wrap">
+            <div class="pt-160 pb-130 mt-10 shape-parent">
+                <div class="container text-center">
+                    <div class="row justify-content-center text-center">
+                        <div>
+                            <h3 class="mb-60 show-on-scroll" data-show-duration="500" data-show-distance="20" style="position: relative; bottom: -150px;">Trauma-Informed Care and Healing-Centered Engagement offer transformative frameworks for reimagining education, particularly for educators committed to fostering social justice and advancing antiracist practices. I like to say that trauma-informed is something you should <i>know</i>, and healing-centered is something you should <i>do</i>, but both are what you should <i>be</i>.</h3>
+                            <img src="assets/images/cloud.png" width="700" height="500">
+                            <h6 class="mb-15 show-on-scroll" data-show-duration="500" data-show-distance="20" style="position: relative; bottom: -500px; top: -100px;">For information about Trauma and Healing, including resources that can guide your everyday schooling practices, click their respective circles. Remember: you are at the heart of this work. Click the center to learn more about how you can focus on your healing journey.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape mt-n160">
+                    <svg data-rellax-speed="-1" width="518" height="641" viewBox="0 0 518 641" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="197.5" cy="320.5" r="320.5" fill="#F5F5F5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="venn-container" style="position: relative; top: -200px;">
+                <a href="trauma.html" class="circle" id="circle1">Trauma</a>
+                <a class="circle" id="circle2">Healing</a>
+                <a class="intersection" id="intersection">
+                    <img src="assets/images/heart.png" width="200" height="200" style="position: relative; top: 165px;">
+                </a>
+            </div>
+            <script>
+                const circle1 = document.getElementById('circle1');
+                const circle2 = document.getElementById('circle2');
+                const intersection = document.getElementById('intersection');
+                const info = document.getElementById('info');
+
+                const setDetails = {
+                    'circle1': 'Set A contains unique elements',
+                    'circle2': 'Set B contains unique elements',
+                    'intersection': 'Elements common to both sets'
+                };
+
+                function showInfo(id) {
+                    info.textContent = setDetails[id];
+                }
+
+                circle1.addEventListener('click', () => showInfo('circle1'));
+                circle2.addEventListener('click', () => showInfo('circle2'));
+                intersection.addEventListener('click', () => showInfo('intersection'));
+            </script>
+        </div>
+        <!-- START: Scripts -->
+        <!-- Object Fit Polyfill -->
+        <script src="assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- ImagesLoaded -->
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <!-- Swiper -->
+        <script src="assets/vendor/swiper/dist/js/swiper.min.js"></script>
+        <!-- Animejs -->
+        <script src="assets/vendor/animejs/lib/anime.min.js"></script>
+        <!-- Rellax -->
+        <script src="assets/vendor/rellax/rellax.min.js"></script>
+        <!-- Countdown -->
+        <script src="assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+        <!-- Moment.js -->
+        <script src="assets/vendor/moment/min/moment.min.js"></script>
+        <script src="assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+        <!-- Isotope -->
+        <script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <!-- Jarallax -->
+        <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+        <script src="assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+        <!-- Fancybox -->
+        <script src="assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+        <!-- Themebau -->
+        <script src="assets/js/themebau.min.js"></script>
+        <!-- END: Scripts -->
+    </body>
+</html>
